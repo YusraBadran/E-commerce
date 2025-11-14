@@ -83,14 +83,32 @@ header .navbar a:hover{
     color: var(--pink);
 }
 
-header .icons a{
+header .cart-icon {
     font-size: 2.5rem;
     color: #333;
     margin-left: 1.5rem;
+    position: relative;
 }
 
-header .icons a:hover{
+header .cart-icon :hover{
     color: var(--pink);
+    cursor: pointer;
+}
+
+header .cart-icon span {
+    background: var(--pink);
+    color: #fff;
+    border-radius: 50%;
+    width: 15px;
+    height: 15px;
+    font-size: 9px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    position: absolute;
+    top: -5px;
+    right: -5px;
 }
 
 header #toggler{
@@ -318,6 +336,96 @@ header .fa-bars{
     font-weight: lighter;
     text-decoration: line-through;
 }
+
+
+/* cart menu sidebar */
+.sidebar{
+    width: 300px;
+    height: 100%;
+    position: fixed;
+    top: 0;
+   /*  right: 0; */
+    right: -300px;
+    background-color: #e6d8df;
+    box-shadow: -4px 0 6px rgba(0, 0, 0, 0.1);
+    transition: right 0.3s ease-in-out;
+    z-index: 1000;
+    padding: 20px;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+
+.sidebar.open{
+    right: 0;
+}
+
+.sidebar-close{
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 24px;
+    cursor: pointer;
+    color: #333;
+}
+
+.sidebar-close:hover{
+    color: var(--pink);
+}
+
+.cart-menu h3{
+    font-size: 25px;
+}
+.cart-items{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 1em;
+    font-size: 16px;
+}
+
+.individual-cart-item{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 5px;
+    border-radius: 5px;
+    color: #333;
+    border: 1px solid #e89dc1;
+}
+
+.cart-item-price{
+    font-size: 15px;
+    color: #e84393;
+}
+
+.sidebar--footer{
+    position: absolute;
+    bottom: 10px;
+    width: 88%;
+}
+
+.total--amount{
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 2px solid var(--pink);
+    border-radius: 5px;
+    padding: 15px 10px;
+}
+
+.cart-total{
+    font-size: 16px;
+    color: #555;
+    font-weight: 500;
+}
+
+.checkot--btn{
+    width: 100%;
+    margin-top: 2rem;
+    border-radius: 5px;
+}
+
+/* review */
 
 .review .box-container{
     display: flex;
