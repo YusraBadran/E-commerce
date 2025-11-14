@@ -348,12 +348,12 @@
                 <img src="img/contact.jpeg" alt="">
             </div>
 
-            <form action="" >
-                <input type="text" placeholder="name" class="box" required>
-                <input type="email" placeholder="email" class="box" required>
-                <input type="tel" placeholder="phone number" class="box" required>
-                <textarea name="" class="box" placeholder="message" id="" cols="30" rows="10" required></textarea>
-                <input type="submit" value="send message" class="btn">
+            <form action="contact.php" method="post">
+                <input type="text" placeholder="Enter Your Name" name="name" class="box" required>
+                <input type="email" placeholder="Enter Your Email" name="email" class="box" required>
+                <input type="tel" placeholder="Enter Your Phone Number" name="phone" class="box" required>
+                <textarea  class="box" placeholder="Put Your Message" name="message"  cols="30" rows="10" required></textarea>
+                <input type="submit" name="submit" value="send message" class="btn">
             </form>
             
             
@@ -412,4 +412,5 @@
 <script src="script.js"></script>
 </body>
 </html>
+
 
