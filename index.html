@@ -37,25 +37,24 @@
             </div>
 
               <!-- cart sidebar section  -->
-        <div class="sidebar" id="sidebar">
-            <div class="sidebar-close">
-                <i class="fa-solid fa-close"></i>
-                </div>
-                <div class="cart-menu">
-                    <h3>My Cart</h3>
-                    <div class="cart-items"></div>
-                </div>
-
-                <div class="sidebar--footer">
-                    <div class="total--amount">
-                        <h5>total</h5>
-                        <div class="cart-total">$0.00</div>
+            <div class="sidebar" id="sidebar">
+                <div class="sidebar-close">
+                    <i class="fa-solid fa-close"></i>
                     </div>
-                    <button class="checkot--btn btn">check out</button>
-                </div>
+                    <div class="cart-menu">
+                        <h3>My Cart</h3>
+                        <div class="cart-items"></div>
+                    </div>
 
-            
-        </div>
+                    <div class="sidebar--footer">
+                        <div class="total--amount">
+                            <h5>total</h5>
+                            <div class="cart-total">$0.00</div>
+                        </div>
+                        <button class="checkot--btn btn" id="checkoutBtn">check out</button>
+                    </div>
+                    
+            </div>
     </header>
     
     <!-- header section end -->
@@ -405,6 +404,21 @@
         </section>
     <!-- footer section ends -->
     
+
+    <!-- Checkout Popup Modal -->
+<div class="checkout-popup" id="checkoutPopup">
+  <div class="checkout-popup-content">
+    <span class="close-popup" id="closePopup">&times;</span>
+    <h3>Confirm Your Order</h3>
+    <form id="checkoutForm" action="submit_order.php" method="POST">
+      <input type="text" name="name" placeholder="Your Name" required />
+      <input type="text" name="phone" placeholder="Phone Number" required />
+      <input type="hidden" name="cartData" id="cartData" />
+      <button type="submit" class="btn">Place Order</button>
+    </form>
+  </div>
+</div>
+
 
 
 
